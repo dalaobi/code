@@ -49,8 +49,21 @@ public class tanxin{
         }
         return count >= n;
     }
-/**392.isSub
- * 
+/**to review
+ * 392.isSubsequence
+ * 1)str.indexOf(a,[])   返回a第一次出现位置，没有返回-1
+ * str.indexOf(a, fromindex) 从fromindex 开始检查
+ * 2）str.toCharArray ()     string to 字符数组
  */
+    public boolean isSubsequence(String s, String t){
+        int index = -1;
+        for (char a : s.toCharArray()){
+            index = t.indexOf(a, index+1);
+            if (index == -1){return false;}
+        }
+        return true;
+    }
 
+/**
+ *  */    
 }
